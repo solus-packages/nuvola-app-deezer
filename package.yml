@@ -1,0 +1,19 @@
+name       : nuvola-app-deezer
+version    : 2.4
+release    : 1
+source     :
+    - https://github.com/tiliado/nuvola-app-deezer/archive/2.4.tar.gz : 860fe0eb45a7bc6a9ca24af02dbb1887ffdb0e1d52b3292f2c0d46d0e01b567f
+license    : BSD-2-Clause
+component  : desktop.multimedia
+summary    : Deezer Integration for Nuvola Player 3.
+description: |
+    Integration of Deezer into your linux desktop via Nuvola Player.
+builddeps  :
+    - scour
+    - librsvg-devel
+rundeps    :
+    - nuvolaplayer
+build      : |
+    %make 
+install    : |
+    %make_install DEST="$installdir/usr/share/nuvolaplayer3/web_apps"
